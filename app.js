@@ -1,4 +1,4 @@
-const ul = document.querySelector("ul");
+const div = document.querySelector("div");
 const btn = document.querySelector("button");
 document.addEventListener("DOMContentLoaded", addDadJokes);
 
@@ -10,9 +10,9 @@ async function getDadJokes() {
 
 async function addDadJokes() {
   let joke = await getDadJokes();
-  const li = document.createElement("li");
-  li.append(joke);
-  ul.append(li);
+  const p = document.createElement("P");
+  p.innerText = joke;
+  div.appendChild(p);
 }
 
 btn.addEventListener("click", addDadJokes);
