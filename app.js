@@ -11,8 +11,8 @@ async function getDadJokes() {
 async function addDadJokes() {
   let joke = await getDadJokes();
   const p = document.createElement("P");
-  p.innerText = joke;
   div.appendChild(p);
+  p.innerText = joke;
 }
 
 btn.addEventListener("click", addDadJokes);
